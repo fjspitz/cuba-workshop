@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+
+    <view entity="workshop_Mechanic" name="mechanic-view" extends="_local">
+        <property name="user" view="_minimal"/>
+    </view>
+    <view entity="workshop_Order" name="order-view" extends="_local">
+        <property name="client" view="_minimal"/>
+        <property name="mechanic" view="_minimal">
+            <property name="hourlyRate"/>
+        </property>
+        <property name="parts" view="_minimal">
+            <property name="description"/>
+            <property name="price"/>
+        </property>
+    </view>
+</views>
